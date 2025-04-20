@@ -6,17 +6,26 @@
 <body>
 <h2>Product List</h2>
 <table border="1">
+<!--    <div>Priyanshi" ${pln}"</div>-->
+<!--    <div>LastName</div>-->
+<!--    <p th:text="${lastName}"></p>-->
     <tr>
         <th>Name</th>
         <th>Description</th>
         <th>Price</th>
+        <th>Rating</th>
+        <th>Category</th>
     </tr>
     <tr th:each="product : ${products}">
         <td th:text="${product.name}"></td>
         <td th:text="${product.description}"></td>
         <td th:text="${product.price}"></td>
+        <td th:text="${product.rating}"></td>
+        <td th:text="${product.category}"></td>
     </tr>
+
 </table>
+
 <br>
 <a href="/add">Add Product</a>
 </body>
